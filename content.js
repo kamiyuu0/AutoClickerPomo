@@ -5,9 +5,13 @@ if (!window.hasContentScriptListener) {
   chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         if (request.action === "getDOMElement") {
-            var element = document.getElementsByClassName("pomodoro-timer-count");
+            const element = document.getElementsByClassName("pomodoro-timer-count");
             if (element[0] != undefined) {
               console.log(element[0]);
+              if (element[0].textContent === "25:00"){
+                const btn = document.getElementsByClassName('pomodoro-start-btn')[0];
+                btn.click();
+              }
               sendResponse({ data: element[0].textContent });
             } else {
               console.log('test');

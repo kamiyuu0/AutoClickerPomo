@@ -22,16 +22,16 @@ setInterval(() => {
                     if (response && response.data) {
                         console.log("Element text:", response.data);
                         console.log(response.data.toString());
-                        if (response.data === '25:00' ){
-                            let opt = {
-                                type: "image",
-                                title: "ポモってる？",
-                                message: "ポモドーロスタートし忘れてませんか？",
-                                iconUrl: "image.png",
-                                imageUrl: "image.png"
-                            }
-                            chrome.notifications.create(opt);
-                        }
+                        // if (response.data === '25:00' ){
+                        //     let opt = {
+                        //         type: "image",
+                        //         title: "ポモスタート",
+                        //         message: "ポモドーロタイマーをスタートしました",
+                        //         iconUrl: "image.png",
+                        //         imageUrl: "image.png"
+                        //     }
+                        //     chrome.notifications.create(opt);
+                        // }
                     } else {
                         console.log('log');
                     }

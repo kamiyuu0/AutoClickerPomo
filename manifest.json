@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Remember Pomo",
+  "name": "AutoClickerPomo",
   "version": "1.0",
-  "description": "ポモドーロの開始忘れを通知してくれます。",
+  "description": "ポモドーロの開始を自動でしてくれます",
   "permissions": [
     "tabs",
     "activeTab",
